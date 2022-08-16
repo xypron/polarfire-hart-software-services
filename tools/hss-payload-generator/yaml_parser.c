@@ -1,4 +1,4 @@
-/******************************************************************************************
+/b/******************************************************************************************
  *
  * MPFS HSS Embedded Software - tools/hss-payload-generator
  *
@@ -926,7 +926,7 @@ static void Handle_STATE_NEW_PAYLOAD_PRIV_MODE(yaml_event_t *pEvent)
 						debug_printf(2, "\tSetting priv mode for %d to %d\n", base_secondary[i], base_priv_mode);
 						bootImage.hart[base_secondary[i]-1].privMode = base_priv_mode;
 					} else {
-						fprintf(stderr, "Attempted to set U54_%" PRIu64 " to priv_mode %u, but it is already set to %u\n"
+						fprintf(stderr, "Attempted to set U54_%zu to priv_mode %u, but it is already set to %u\n"
 							"Please check configuration file\n",
 							base_secondary[i], base_priv_mode, bootImage.hart[base_secondary[i]-1].privMode);
 						exit(EXIT_FAILURE);
